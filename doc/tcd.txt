@@ -1,0 +1,40 @@
+*tcd.txt* Tcd: Tab-specific directories
+        For Vim version 7.x
+        By Thomas Allen <thomas@oinksoft.com>
+
+Tcd lets you set a working directory for a specific tab. Great if you've
+got a session open and are editing some file in another location on the
+filesystem, and decide you need to open more files in that directory.
+This plugin works particularly well in combination with NERD_Tree.vim
+
+=============================================================================
+Global Commands
+
+:Tcd <dir>                                                               *:Tcd*
+
+Changes the current working directory, but only in your current tab.
+When you enter this tab, the specified path will become your current
+working directory. Saves the real current working directory, so when you
+exit this tab, you will return to your prior location.
+
+=============================================================================
+Known Issues                                                       *tcd-issues*
+
+  1. The "old cwd" (the one you switch to when leaving the tab in which you
+     called :Tcd) is set the first time you call :Tcd. This means that if
+     change your working directory later with the built-in :cd command, this
+     new location will be ignored when leaving :Tcd tabs.
+
+     Workaround: Don't use :cd if you are still using :Tcd tabs. Instead,
+     call :Tcd in other tabs. I don't expect there to be a real fix for this
+     unless Vim adds some autocommand that is run whenever the current
+     working directory changes.
+
+=============================================================================
+License                                                           *tcd-license*
+
+tcd.vim is released under the MIT license. See the comments at the head of
+tcd.vim for the full license text, or the "COPYING" file you should have
+received with your copy of this software.
+
+vim:ft=help:norl:
