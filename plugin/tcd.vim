@@ -29,7 +29,7 @@ if exists('loaded_tcd')
   fini
 end
 
-fu! g:Tcd(path)
+fu! Tcd(path)
   let t:tcd_ocwd = getcwd()
   let t:tcd_cwd = a:path
   call s:cd(a:path)
@@ -55,4 +55,4 @@ endf
 au TabEnter * silent call s:tab_entered()
 au TabLeave * silent call s:tab_exited()
 
-com! -nargs=1 -complete=dir Tcd :call g:Tcd(<f-args>)
+com! -nargs=1 -complete=dir Tcd :call Tcd(<f-args>)

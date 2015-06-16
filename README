@@ -3,8 +3,6 @@ This is a mirror of http://www.vim.org/scripts/script.php?script_id=4431
 Tab-specific directories
 For Vim version 7.x
 
-Note: You can follow developments and get the latest (possibly unstable) version of this script at https://github.com/oinksoft/tcd.vim
-
 Tcd lets you set a working directory for a specific tab. Great if you've
 got a session open and are editing some file in another location on the
 filesystem, and decide you need to open more files in that directory.
